@@ -1,0 +1,8 @@
+print("Introduce tu nombre:")
+aNombre = input()
+print("Introduce tu edad:")
+aEdad = int(input())
+print("Introduce el año actual:")
+aAñoactual = int(input())
+print("Tu año de nacimiento es:", end='', flush=True)
+print(aAñoactual - aEdad, end='', flush=True)

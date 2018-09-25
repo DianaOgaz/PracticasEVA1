@@ -1,0 +1,47 @@
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+// Headers
+string toString (double);
+int toInt (string);
+double toDouble (string);
+
+int main() {
+    double vInicial;
+    
+    cout << "Ingrese la velocidad inicial" << endl;
+    cin >> vInicial;
+    cout << "Ingrese la velocidad final" << endl;
+    int vFinal;
+    
+    cin >> vFinal;
+    cout << "Ingrese el tiempo" << endl;
+    double tiempo;
+    
+    cin >> tiempo;
+    double distancia;
+    
+    distancia = (vInicial + vFinal) / 2;
+    cout << distancia << endl;
+    return 0;
+}
+
+// The following implements type conversion functions.
+string toString (double value) { //int also
+    stringstream temp;
+    temp << value;
+    return temp.str();
+}
+
+int toInt (string text) {
+    return atoi(text.c_str());
+}
+
+double toDouble (string text) {
+    return atof(text.c_str());
+}
